@@ -20,7 +20,7 @@ $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     $scope.logout = function () {
                     $http.post('/logout', {}).success(function () {
                         $rootScope.authenticated = false;
-                        $location.path("/login");
+                        $location.path("/");
                     }).error(function (data) {
                         $rootScope.authenticated = false;
                     });

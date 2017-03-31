@@ -5,8 +5,20 @@
 <div class="container">
 
   <form>
-    <label>Descripción: <input type="text" ng-model="descripcion" class="form-control"/></label><br />
-    <label>Prioridad: <input type="number" ng-model="prioridad" max="10" min="1" class="form-control"/></label><br />
+    <div class="form-group has-success has-feedback">
+      <label class="control-label" for="inputSuccess2">Descripción: </label>
+      <input type="text" ng-model="descripcion" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+      <span id="inputSuccess2Status" class="sr-only">(success)</span>
+    </div>
+    <div class="form-group has-success has-feedback">
+      <label class="control-label" for="inputSuccess2">Prioridad: </label>
+      <input type="number" ng-model="prioridad" max="10" min="1" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+      <span id="inputSuccess2Status" class="sr-only">(success)</span>
+    </div>
+    <!--<label>Descripción: <input type="text" ng-model="descripcion" class="form-control" aria-describedby="inputSuccess2Status"/></label><br />-
+    <label>Prioridad: <input type="number" ng-model="prioridad" max="10" min="1" class="form-control"/></label><br />-->
 
     <input type="button" ng-click="guardar()" value="Guardar" class="btn btn-primary"/>
   </form>

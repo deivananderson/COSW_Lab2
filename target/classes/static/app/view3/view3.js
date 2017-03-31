@@ -10,7 +10,7 @@ angular.module('myApp.view3', ['ngRoute'])
 }])
 
 .controller('View3Ctrl', ['$scope','tareas',function($scope,tareas) {
-
-     $scope.listado=tareas.query();
+    //alert(tareas.query());
+    $scope.listado=tareas.query();
 
 }]);
